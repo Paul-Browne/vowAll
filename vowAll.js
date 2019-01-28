@@ -13,7 +13,7 @@ function vowAll(arr, callbackAll) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4) {
-        if(xhr.status == 200){
+        if(xhr.status == obj.status){
 
           // Allow callbacks for each individual request
           if(obj.callback){
