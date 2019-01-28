@@ -1,12 +1,12 @@
 function vowAll(arr, callbackAll) {
-  var objResolved = [];
+  var arrResolved = [];
   arr.forEach(function(obj, index){
-    objResolved.push(null);
+    arrResolved.push(null);
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4) {
-        objResolved[index] = xhr.status == (obj.status || 200) ? obj.callback ? obj.callback(xhr.responseText) : xhr.responseText : undefined;
-        !~objResolved.indexOf(null) && callbackAll(objResolved);
+        arrResolved[index] = xhr.status == (obj.status || 200) ? obj.callback ? obj.callback(xhr.responseText) : xhr.responseText : undefined;
+        !~arrResolved.indexOf(null) && callbackAll(arrResolved);
       }
     };
     xhr.open(obj.method || "GET", obj.url, true);
