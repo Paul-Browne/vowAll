@@ -41,7 +41,7 @@ vowAll([
 ```
 
 ```javascript
-// will return
+// console log will return
 {
   0: Array(500),  // parsed response from "comments" endpoint
   1: {...},       // parsed response from "posts" endpoint
