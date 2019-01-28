@@ -4,8 +4,8 @@ vowAll: An ES5 friendly alternative to Promise.All in about 400 bytes
 ```javascript
 vowAll([
   {
-    method: "GET",
-    status: 200,
+    method: "GET",  (optional, default: "GET")
+    status: 200,    (optional, default: 200)
     url: "https://jsonplaceholder.typicode.com/comments",
     callback: function(response){   // callback for individual requests (optional)
       return JSON.parse(response);
@@ -28,8 +28,6 @@ vowAll([
     }
   },
   {
-    method: "GET",
-    status: 200,
     url: "https://jsonplaceholder.typicode.com/users",
     callback: function(response){
       return JSON.parse(response);
@@ -42,9 +40,9 @@ vowAll([
 
 ```javascript
 // console log will return
-{
-  0: Array(500),  // parsed response from "comments" endpoint
-  1: {...},       // parsed response from "posts" endpoint
-  2: Array(10)    // parsed response from "users" endpoint  
-}
+[
+  Array(500),  // parsed response from "comments" endpoint
+  {...},       // parsed response from "posts" endpoint
+  Array(10)    // parsed response from "users" endpoint  
+]
 ```
