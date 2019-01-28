@@ -5,6 +5,7 @@ vowAll: An ES5 friendly alternative to Promises in about ~400bytes
 vowAll([
   {
     method: "GET",
+    status: 200,
     url: "https://jsonplaceholder.typicode.com/comments",
     callback: function(response){   // callback for individual requests (optional)
       return JSON.parse(response);
@@ -12,6 +13,7 @@ vowAll([
   },
   {
     method: "POST",
+    status: 201,
     url: "https://jsonplaceholder.typicode.com/posts",
     body: JSON.stringify({
       title: 'foo',
@@ -27,6 +29,7 @@ vowAll([
   },
   {
     method: "GET",
+    status: 200,
     url: "https://jsonplaceholder.typicode.com/users",
     callback: function(response){
       return JSON.parse(response);
