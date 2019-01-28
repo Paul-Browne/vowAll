@@ -1,5 +1,5 @@
 # vowAll
-vowAll: An ES5 friendly alternative to Promise.All in about 400 bytes
+vowAll: An ES5 friendly alternative to Promise.All in about 300 bytes
 
 ```javascript
 vowAll([
