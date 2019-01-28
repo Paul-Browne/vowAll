@@ -48,6 +48,6 @@ function vowAll(arr, callbackAll) {
     for (var key in obj.headers) {
         xhr.setRequestHeader(key, obj.headers[key]);
     }
-    xhr.send(obj.payload);
+    xhr.send(obj.body);
   });
 };
